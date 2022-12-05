@@ -1,0 +1,1 @@
+cmd_/home/electro/udemy/workspace/ldd/custom_drivers/003_pcd_driver/Module.symvers := sed 's/\.ko$$/\.o/' /home/electro/udemy/workspace/ldd/custom_drivers/003_pcd_driver/modules.order | scripts/mod/modpost -m -a  -o /home/electro/udemy/workspace/ldd/custom_drivers/003_pcd_driver/Module.symvers -e -i Module.symvers   -T -
