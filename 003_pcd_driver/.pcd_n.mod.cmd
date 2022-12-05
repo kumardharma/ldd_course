@@ -1,1 +1,0 @@
-cmd_/home/electro/udemy/workspace/ldd/custom_drivers/003_pcd_driver/pcd_n.mod := { echo  /home/electro/udemy/workspace/ldd/custom_drivers/003_pcd_driver/pcd_n.o;  echo; } > /home/electro/udemy/workspace/ldd/custom_drivers/003_pcd_driver/pcd_n.mod

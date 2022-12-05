@@ -1,1 +1,0 @@
-cmd_/home/electro/udemy/workspace/ldd/custom_drivers/002_hello_world/modules.order := {   echo /home/electro/udemy/workspace/ldd/custom_drivers/002_hello_world/pcd.ko; :; } | awk '!x[$$0]++' - > /home/electro/udemy/workspace/ldd/custom_drivers/002_hello_world/modules.order

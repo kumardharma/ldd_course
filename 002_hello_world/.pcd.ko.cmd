@@ -1,1 +1,0 @@
-cmd_/home/electro/udemy/workspace/ldd/custom_drivers/002_hello_world/pcd.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/electro/udemy/workspace/ldd/custom_drivers/002_hello_world/pcd.ko /home/electro/udemy/workspace/ldd/custom_drivers/002_hello_world/pcd.o /home/electro/udemy/workspace/ldd/custom_drivers/002_hello_world/pcd.mod.o;  true

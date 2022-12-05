@@ -1,1 +1,0 @@
-cmd_/home/electro/udemy/workspace/ldd/custom_drivers/001hello_world/main.mod := { echo  /home/electro/udemy/workspace/ldd/custom_drivers/001hello_world/main.o;  echo; } > /home/electro/udemy/workspace/ldd/custom_drivers/001hello_world/main.mod
