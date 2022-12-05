@@ -1,0 +1,1 @@
+cmd_/home/electro/udemy/workspace/ldd/custom_drivers/001hello_world/main.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/electro/udemy/workspace/ldd/custom_drivers/001hello_world/main.ko /home/electro/udemy/workspace/ldd/custom_drivers/001hello_world/main.o /home/electro/udemy/workspace/ldd/custom_drivers/001hello_world/main.mod.o;  true
