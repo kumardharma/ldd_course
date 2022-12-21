@@ -53,22 +53,36 @@ struct file_operations pcd_fops=
 	.owner = THIS_MODULE
 };
 
-ssize_t serial_num_show(struct device *dev,struct device_attribute *attr,char *buff)
+ssize_t show_serial_num(struct device *dev,struct device_attribute *attr,char *buf)
 {
-        return 0;
+	/*get access to dev privaaate data*/
+	struct pcdev_private_data *dev_data = dev_get_drvdata(dev->parent);/*here argument *dev is pointer to
+								  device we created under pcd_class
+								  so mwe can't use this device,if you 
+								want to get access to the device private 
+								data,and then we should get reference
+								to the device which got instantiated 
+								from the device tree or from the 
+								device_setup code.*/
+	return sprintf(buf,"%s\n",dev_data->pdata.serial_number);
+	//storing val of serial_num in the buffer "buf"
+        
 }
-ssize_t max_size_show(struct device *dev,struct device_attribute *attr,char *buff)
+ssize_t show_max_size(struct device *dev,struct device_attribute *attr,char *buf)
 {
+	struct pcdev_private_data *dev_data = dev_get_drvdata(dev->parent);
+        return sprintf(buf,"%d\n",dev_data->pdata.size);
+
 	return 0;
 }
-ssize_t max_size_store(struct device *dev,struct device_attribute *attr,const char *buff,size_t count)
+ssize_t store_max_size(struct device *dev,struct device_attribute *attr,const char *buf,size_t count)
 {
 	return 0;
 }
 
 /*create 2 variables of struct device_attribute */
-static DEVICE_ATTR(max_size,S_IRUGO|S_IWUSR,max_size_show,max_size_store);
-static DEVICE_ATTR(serial_num,S_IRUGO,serial_num_show,NULL);
+static DEVICE_ATTR(max_size,S_IRUGO|S_IWUSR,show_max_size,store_max_size);
+static DEVICE_ATTR(serial_num,S_IRUGO,show_serial_num,NULL);
 
 
 int pcd_sysfs_create_files(struct  device *pcd_dev)

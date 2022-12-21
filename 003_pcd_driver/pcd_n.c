@@ -291,7 +291,7 @@ int pcd_open(struct inode *inode, struct file *filp)
 	pr_info("minor access = %d\n",minor_n);
 
 	/*get the device's private data structure:-access by using a member *i_cdev,
-	  it gives address of the str whos member is cdev(that is our 
+	  it gives address of the str whose member is cdev(that is our 
 	  pcdev_private_data str cdev is member here */
 
 	pcdev_data =container_of(inode->i_cdev,struct pcdev_private_data,cdev);
